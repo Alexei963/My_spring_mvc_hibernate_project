@@ -4,7 +4,7 @@
 <html lang="ru">
 <head>
     <title>Тестовая страница</title>
-    <link href="<c:url value="/WEB-INF/css/style.css" />" rel="stylesheet">
+    <link href="<c:url value="/css/style.css" />" rel="stylesheet">
 </head>
 <body>
 <div>
@@ -16,13 +16,21 @@
             <th>Фамилия</th>
             <th>Возраст</th>
             <th>Email</th>
+            <th>Изменить</th>
         </tr>
         <c:forEach var="user" items="${allUsers}">
+            <c:url var="updateButton" value="/updateInfo">
+                <c:param name="userId" value="${user.id}"/>
+            </c:url>
              <tr>
                  <td>${user.name}</td>
                  <td>${user.surname}</td>
                  <td>${user.age}</td>
                  <td>${user.email}</td>
+                 <td>
+                     <input type="button" value="Редактировать"
+                     onclick="window.location.href = '${updateButton}'"/>
+                 </td>
              </tr>
         </c:forEach>
     </table>

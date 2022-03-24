@@ -5,13 +5,14 @@
 <html lang="ru">
 <head>
     <title>Тестовая страница</title>
-    <link href="<c:url value="/WEB-INF/css/style.css" />" rel="stylesheet">
+    <link href="<c:url value="/css/style.css" />" rel="stylesheet">
 </head>
 <body>
 <div>
     <h2>Данные пользователя</h2>
     <br>
     <form:form action="saveUser" modelAttribute="user">
+        <form:hidden path="id"/>
         Имя<form:input path="name"/>
         <br><br>
         Фамилия<form:input path="surname"/>

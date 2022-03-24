@@ -1,0 +1,26 @@
+h2 {
+    color: darkgreen;
+    font-size: 32px;
+}
+td, th {
+    border: 1px black solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+}
+form#user {
+    border: 1px solid;
+    padding: 15px;
+    display: table;
+    margin-right: 15px;
+    font-size: 18px;
+}
+input#name,
+input#surname,
+input#age,
+input#email {
+    font-size: 18px;
+    margin-left: 20px;
+    float: right;
+}
