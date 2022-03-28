@@ -5,7 +5,9 @@ import main.entity.User;
 import java.util.List;
 
 public interface UserService {
-    public List<User> getAllUsers();
-    public void saveUser(User user);
-    public User getUser(int id);
+    List<User> getAllUsers();
+    void saveUser(User user);
+    User getUser(int id);
+    void deleteUser(int id);
+    void deleteAllUser();
 }

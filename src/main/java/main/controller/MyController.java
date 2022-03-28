@@ -43,4 +43,16 @@ public class MyController {
         model.addAttribute("user", user);
         return "user-info";
     }
+
+    @RequestMapping("/deleteUser")
+    public String deleteUser(@RequestParam("userId") int id) {
+        userService.deleteUser(id);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/deleteAllUser")
+    public String deleteAllUser() {
+        userService.deleteAllUser();
+        return "redirect:/";
+    }
 }

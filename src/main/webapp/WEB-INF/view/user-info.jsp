@@ -21,7 +21,8 @@
         <br><br>
         Email<form:input path="email"/>
         <br><br>
-        <input type="submit" value="OK">
+        <input type="submit" value="Сохранить"/>
+        <input type="button" class="back" onclick="history.back();" value="Назад"/>
     </form:form>
 </div>
 </body>
